@@ -1,6 +1,13 @@
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Image from 'next/image'
+import Link from 'react-router-dom';
+import Calendar from '../../pages/calendar';
+import { RouterProvider, createBrowserRouter, Route } from 'react-router-dom';
+
+const router = createBrowserRouter(createRoutesFromElements(
+  <Route path='/calendar' element={<Calendar />} />
+));
 
 // todo: add links to pages when ready
 const navigation = [
@@ -28,7 +35,7 @@ const navigation = [
   //   ],
   // },
   // { name: 'Partners', href: '#', current: false, sub_links: [{ name: 'Contact Us', href: '#' }] },
-  // { name: 'Calendar', href: '#', current: false },
+   { name: 'Calendar', href: '#', current: true },
 ]
 
 function classNames(...classes) {
